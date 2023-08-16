@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Set display to none for image*/
+        #image1 {
+            display: none;
+            margin-left: auto;
+        margin-right: auto;
+        }
+        #image2 {
+            display: none;
+            margin-left: auto;
+        margin-right: auto;
+        }
+        #image3 {
+            display: none;
+            margin-left: auto;
+        margin-right: auto;
+        }
+        #image4 {
+            display: none;
+            margin-left: auto;
+        margin-right: auto;
+        }
+    </style>
+</head>
+<body onload=show()>
+    <div>
+        <img id="image1" src="https://i.ibb.co/LPp8GNW/Flagwhite-Menu-1.jpg"/>
+        <img id="image2" src="https://i.ibb.co/J2htqBT/Flagwhite-Menu-2.jpg"/>
+        <img id="image3" src="https://i.ibb.co/XWxq09N/Flagwhite-Menu-4.jpg"/>
+        <img id="image4" src="https://i.ibb.co/ynkvsXV/Flagwhite-Menu-3.jpg"/>
+    </div>
+    <script>
+        function show() {
+            const d = new Date();
+          let hour = d.getHours();
+            let minutes = d.getMinutes();
+            if ((hour >= 9 && hour <= 19) || (hour == 20 && minutes <= 29)) {
+              document.getElementById('image1').style.display = "block"
+                document.getElementById('image2').style.display = "block"
+                document.getElementById('image4').style.display = "block"
+            } 
+            else {
+              document.getElementById('image3').style.display = "block"
+              document.getElementById('image4').style.display = "block"
+            }
+        }
+    </script>
+</body>
+</html>
